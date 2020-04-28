@@ -10,6 +10,6 @@ image:
 	docker image build -t $(IMAGE_LABEL) .
 
 run:
-	docker run --rm --env-file $(ENV_FILE) --name $(CONTAINER_NAME) $(IMAGE_LABEL) 2>&1 | tee $(CONTAINER_NAME).log
+	docker run --rm --shm-size 2g --env-file $(ENV_FILE) --name $(CONTAINER_NAME) $(IMAGE_LABEL) 2>&1 | tee $(CONTAINER_NAME).log
 
 .PHONY: all image run
