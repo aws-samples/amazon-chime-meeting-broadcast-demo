@@ -10,8 +10,10 @@ You will need Docker and `make` installed on your system. As this container is r
 
 The input for the container is a file called `container.env`. You create this file by copying the `container.env.template` to `container.env` and filling in the following variables:
  
-* `MEETING_PIN`: the PIN for the Amazon Chime meeting you wish to broadcast (without any spaces in it)
-  * Example: `1234567890`
+ 
+* `MEETING_URL`: Chime Meeting URL (without any spaces in it)
+  * Example(If you want to record Chime): ` https://app.chime.aws/portal/<your Meeting ID here>`
+  * Example(For Chime SDK Demo Users): `<Hosted Chime URL>/?m=<Meeting ID>&record=true`
 * `RTMP_URL`: the URL of the RTMP endpoint,
   * Twitch example: `rtmp://live.twitch.tv/app/<stream key>`
   * YouTube Live example: `rtmp://a.rtmp.youtube.com/live2/<stream key>`
